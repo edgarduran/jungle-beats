@@ -127,4 +127,12 @@ class JungleBeatsTest < Minitest::Test
     assert list.play_node_values
   end
 
+  def test_it_inserts_node_at_pos
+    list = LinkList.new("boom")
+    list.append("pop")
+    list.append("zip")
+    list.append("bing")
+    assert_equal ["boom", "pop", "zip", "bing"], list.insert_node_by_pos("beep", 2)
+
+
 end

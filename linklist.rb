@@ -93,25 +93,16 @@ class LinkList
      `say -r 300 -v Boing "#{all_nodes}"`
   end
 
-  def
-
-  def insert_in_position(pos)
-    current = @head
-
-    opped_values = []
-    times.times do
-    popped_values <<  pop
-    end
-    popped_values.reverse
+  def play_beats_from_file(beats)
+    `say -r 300 -v Boing "#{beats}"`
   end
 
+  def insert_node_by_pos(value, pos)
+      current = @head
+      pos.times do
+        current = current.next_node
+      end
+      current
+    end
 
 end
-
-# list = LinkList.new("bop")
-# list.append("zing")
-# list
-# list.append("boom")
-# list
-# list.prepend_node("hop")
-# list.find_by_pos(2)
